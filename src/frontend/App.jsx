@@ -3,15 +3,21 @@ import "./App.css";
 import { useEffect } from "react";
 import { Lexer } from "../evaluator/lexer";
 import { Parser } from "../evaluator/parser";
+import { Interpreter } from "../evaluator/interpreter";
 
 function App() {
   const [input, setInput] = useState("");
+  const [result, setResult] = useState("");
 
   useEffect(() => {
-    const tokens = new Lexer(input).scanTokens();
-    console.log("tokens", tokens);
-    const ast = new Parser(tokens).parse();
-    console.log("AST", ast);
+    try {
+      const tokens = new Lexer(input).scanTokens();
+      const ast = new Parser(tokens).parse();
+      const value = new Interpreter(ast).interpret();
+      setResult(value);
+    } catch (error) {
+      setResult(error.message);
+    }
   }, [input]);
 
   return (
@@ -24,6 +30,7 @@ function App() {
       </div>
       <div className="output">
         <h2>Result</h2>
+        <span className="result">{result}</span>
       </div>
     </div>
   );
