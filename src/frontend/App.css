@@ -1,0 +1,27 @@
+#root {
+    max-width: 1280px;
+    margin: 0 auto;
+    width: 100%;
+}
+
+.container {
+    display: grid;
+    height: 100vh;
+    grid-template-columns: 1fr 1fr;
+}
+
+.container > div {
+    display: flex;
+    justify-content: center;
+}
+
+.ouput .header {
+    font-size: 6em;
+}
+
+textarea {
+    width: 100%;
+    min-height: 300px;
+    font-size: 4em;
+    padding-top: 24px;
+}
