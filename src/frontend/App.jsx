@@ -2,6 +2,7 @@ import { useState } from "react";
 import "./App.css";
 import { useEffect } from "react";
 import { Lexer } from "../evaluator/lexer";
+import { Parser } from "../evaluator/parser";
 
 function App() {
   const [input, setInput] = useState("");
@@ -9,6 +10,8 @@ function App() {
   useEffect(() => {
     const tokens = new Lexer(input).scanTokens();
     console.log("tokens", tokens);
+    const ast = new Parser(tokens).parse();
+    console.log("AST", ast);
   }, [input]);
 
   return (
