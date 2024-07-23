@@ -22,13 +22,10 @@
   grid-template-rows: 1fr 1fr;
 }
 
-.result-wrapper {
-  width: 100%;
-}
-
 textarea {
   width: 100%;
-  min-height: 300px;
+  min-height: 200px;
+  height: 100%;
   font-size: 4em;
   padding-top: 24px;
 }

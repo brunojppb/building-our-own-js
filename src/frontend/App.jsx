@@ -44,17 +44,21 @@ function App() {
         />
       </div>
       <div className="output">
-        <div className="result-wrapper">
+        <div className="interpreter-result">
           <h2>Interpreter Result</h2>
-          <span className="result">{result}</span>
-          <div>
-            <h2>Eval result</h2>
-            <span className="result">{evalResut}</span>
-          </div>
+          <div className="result">{result}</div>
         </div>
-        <div className="ast-wrapper">
-          <ASTExplorer ast={ast} />
+        <div className="eval">
+          <h2>Eval result</h2>
+          <div className="result">{evalResut}</div>
         </div>
+      </div>
+
+      <div className="links">
+        <h2>Links</h2>
+      </div>
+      <div className="ast">
+        <ASTExplorer ast={ast} />
       </div>
     </div>
   );
