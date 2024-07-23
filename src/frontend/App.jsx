@@ -60,7 +60,7 @@ function App() {
           alt="QR Code to https://building-our-own-js.pages.dev/"
         />
         <p>
-          Build with <span alt="heart">❤️</span> by{" "}
+          Built with <span alt="heart">❤️</span> by{" "}
           <a href="https://github.com/brunojppb">Bruno Paulino</a> for the{" "}
           <a href="https://www.thegeekconf.com/">GeekConf</a>
         </p>
