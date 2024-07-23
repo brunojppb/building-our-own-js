@@ -8,24 +8,36 @@
   display: grid;
   height: 100vh;
   grid-template-columns: 1fr 1fr;
+  grid-auto-rows: 1fr;
+}
+
+.container > div {
+  padding: 16px;
 }
 
 .container .input {
-  padding: 16px;
   display: flex;
   justify-content: center;
 }
 
 .output {
-  padding: 16px;
   display: grid;
   grid-template-rows: 1fr 1fr;
+}
+
+.links {
+  display: flex;
+  flex-direction: column;
+}
+
+.links img {
+  width: 100%;
+  max-width: 250px;
 }
 
 textarea {
   width: 100%;
   min-height: 200px;
-  height: 100%;
-  font-size: 4em;
+  font-size: 2em;
   padding-top: 24px;
 }
