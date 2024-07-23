@@ -1,5 +1,6 @@
 /* eslint-disable react/prop-types */
 import { Binary, Grouping, Literal } from "../evaluator/expression";
+import "./ast.css";
 
 export function ASTExplorer({ ast }) {
   return (
@@ -16,14 +17,18 @@ function ASTNode({ node }) {
   }
 
   if (node instanceof Literal) {
-    return <div style={{ paddingLeft: "16px" }}>literal: {node.value}</div>;
+    return <div className="node">literal: {node.value}</div>;
   }
 
   if (node instanceof Binary) {
     return (
-      <div style={{ paddingLeft: "16px" }}>
+      <div className="node">
+        Binary
         <ASTNode node={node.left} />
-        <div style={{ paddingLeft: "16px" }}>{node.operator.lexeme}</div>
+        <div className="node">
+          <span className="operator">operator:</span>{" "}
+          <span className="lexeme">{node.operator.lexeme}</span>
+        </div>
         <ASTNode node={node.right} />
       </div>
     );
@@ -31,7 +36,8 @@ function ASTNode({ node }) {
 
   if (node instanceof Grouping) {
     return (
-      <div style={{ paddingLeft: "16px" }}>
+      <div className="node">
+        Grouping
         <ASTNode node={node.expression} />
       </div>
     );

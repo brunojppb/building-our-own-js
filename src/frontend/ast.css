@@ -1,0 +1,12 @@
+.node {
+  padding-left: 16px;
+  border: 1px solid #333;
+}
+
+.node .operator {
+  color: #666;
+}
+
+.node .lexeme {
+  font-weight: bold;
+}
