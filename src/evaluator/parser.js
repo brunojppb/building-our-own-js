@@ -1,4 +1,3 @@
-import { Token } from "./token";
 import { Binary, Grouping, Literal } from "./expression";
 
 /**
@@ -72,7 +71,7 @@ export class Parser {
       `unsupported primary expression: literal=${
         this.previous()?.literal
       } lexeme=${this.previous()?.lexeme}
-        current_position=${this.#current}`,
+        current_position=${this.#current}`
     );
   }
 
@@ -86,7 +85,7 @@ export class Parser {
     }
 
     throw new Error(
-      `${message} current=${this.#current} peek=${this.peek().lexeme}`,
+      `${message} current=${this.#current} peek=${this.peek().lexeme}`
     );
   }
 
@@ -117,7 +116,7 @@ export class Parser {
       return false;
     }
 
-    return this.peek().kind == type;
+    return this.peek().kind === type;
   }
 
   peek() {
