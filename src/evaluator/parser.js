@@ -26,12 +26,7 @@ export class Parser {
   }
 
   parse() {
-    try {
-      return this.expression();
-    } catch (e) {
-      console.error("Could not parse tokens", e);
-      return null;
-    }
+    return this.expression();
   }
 
   expression() {
@@ -77,7 +72,7 @@ export class Parser {
       `unsupported primary expression: literal=${
         this.previous()?.literal
       } lexeme=${this.previous()?.lexeme}
-        current=${this.#current}`,
+        current_position=${this.#current}`,
     );
   }
 
