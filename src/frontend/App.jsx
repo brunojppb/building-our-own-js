@@ -63,6 +63,9 @@ function App() {
           Built with <span alt="heart">❤️</span> by{" "}
           <a href="https://github.com/brunojppb">Bruno Paulino</a> for the{" "}
           <a href="https://www.thegeekconf.com/">GeekConf</a>
+          <br />
+          Source available at{" "}
+          <a href="https://github.com/brunojppb/building-our-own-js">here</a>.
         </p>
       </div>
       <div className="ast">
