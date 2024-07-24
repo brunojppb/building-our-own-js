@@ -68,7 +68,7 @@ export class Lexer {
     }
 
     // consume floating point values
-    if (this.peek() == "." && this.isDigit(this.peekNext())) {
+    if (this.peek() === "." && this.isDigit(this.peekNext())) {
       // consume the dot
       this.advance();
       while (this.isDigit(this.peek())) {
@@ -80,7 +80,7 @@ export class Lexer {
     // ready to be fully consumed and added as a token
     this.addTokenWithValue(
       "NUMBER",
-      Number(this.#source.substring(this.#start, this.#current)),
+      Number(this.#source.substring(this.#start, this.#current))
     );
   }
 
