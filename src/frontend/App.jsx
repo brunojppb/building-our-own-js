@@ -64,7 +64,7 @@ function App() {
           <a href="https://github.com/brunojppb">Bruno Paulino</a> for the{" "}
           <a href="https://www.thegeekconf.com/">GeekConf</a>
           <br />
-          Source available at{" "}
+          Source available{" "}
           <a href="https://github.com/brunojppb/building-our-own-js">here</a>.
         </p>
       </div>
