@@ -27,7 +27,6 @@ function App() {
 
   useEffect(() => {
     try {
-      // biome-ignore lint/security/noGlobalEval: Just for demo purposes. Don't do this at home.
       const result = eval(input);
       setEvalResult(result);
     } catch (error) {
