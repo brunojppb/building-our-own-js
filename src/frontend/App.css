@@ -35,6 +35,10 @@
   max-width: 250px;
 }
 
+.result {
+  font-size: 32px;
+}
+
 textarea {
   width: 100%;
   min-height: 200px;
