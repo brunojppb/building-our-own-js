@@ -5,6 +5,10 @@ a fully functional expression evaluator like in the JavaScript language.
 
 Web version available at [building-our-own-js.pages.dev](https://building-our-own-js.pages.dev/)
 
+## Slides
+
+You can download the slides of the talk [here](https://github.com/brunojppb/building-our-own-js/blob/e7d96c4b691e6e6579007de544b1f5d6a78eb2bf/Building%20our%20own%20JavaScript%20-%20slides.pdf)
+
 ## Features
 
 This project has the following features to demonstrate how interpreted languages work:
